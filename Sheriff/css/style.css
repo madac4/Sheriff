@@ -359,6 +359,193 @@ h2 {
   width: 175px;
 }
 
+.reward-section {
+  padding: 80px;
+}
+
+.reward-section .section-header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reward-section .section-header p {
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+.reward-section .section-header h2 span {
+  color: #FFE400;
+}
+
+.reward-section .reward-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  grid-gap: 30px;
+}
+
+.reward-section .reward-grid .reward-grid__item {
+  position: relative;
+  width: 100%;
+  gap: 7px;
+  grid-column: 2 span;
+}
+
+.reward-section .reward-grid .reward-grid__item .reward-item__info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reward-section .reward-grid .reward-grid__item .reward-item__info p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+
+.reward-section .reward-grid .reward-grid__item:nth-child(2n + 2) {
+  grid-column: 1 span;
+  grid-row: 2 span;
+}
+
+.reward-section .reward-grid .reward-grid__item:nth-child(2n + 3) {
+  grid-column: 1 span;
+  grid-row: 1 span;
+}
+
+.reward-section .reward-grid .reward-grid__item:nth-child(2n + 4) {
+  grid-column: 1 span;
+  grid-row: 1 span;
+}
+
+.app-section {
+  background: -o-linear-gradient(315deg, #FBDA61 2.88%, #FFC371 100%);
+  background: linear-gradient(135deg, #FBDA61 2.88%, #FFC371 100%);
+  padding-top: 70px;
+}
+
+.app-section__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-section__container .download-buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.app-section__container .section-header {
+  max-width: 360px;
+}
+
+.app-section__container .section-header .btn-dark {
+  width: 172px;
+  margin-top: 45.5px;
+}
+
+.faq-section {
+  padding: 80px;
+}
+
+.faq-section .section-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.faq-section .faq-accordion {
+  display: block;
+}
+
+.faq-section .faq-accordion .accordion-item {
+  width: 100%;
+  padding: 20px 15px;
+  border: 1px solid grey;
+  --accordion-time: 0.3s;
+}
+
+.faq-section .faq-accordion .accordion-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.faq-section .faq-accordion .accordion-item.is-open .accordion-item__header::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.faq-section .faq-accordion .accordion-item.is-open .accordion-item__content {
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.faq-section .faq-accordion .accordion-item__header {
+  position: relative;
+  -webkit-transition: all var(--accordion-time) ease-out;
+  -o-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  cursor: pointer;
+}
+
+.faq-section .faq-accordion .accordion-item__header h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3C3C3C;
+}
+
+.faq-section .faq-accordion .accordion-item__header::after {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  cursor: pointer;
+  content: url("/img/icons/plus.svg");
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  -o-transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+
+.faq-section .faq-accordion .accordion-item__header.open::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.faq-section .faq-accordion .accordion-item__content {
+  -webkit-transition: all var(--accordion-time) ease-out;
+  -o-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
+}
+
+.faq-section .faq-accordion .accordion-item__content p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3C3C3C;
+}
+
 .header {
   padding: 20px 0;
   position: fixed;
