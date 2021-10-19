@@ -265,11 +265,25 @@
             width: 100%;
             padding: 20px 15px;
             border: 1px solid grey;
+            --accordion-time: 0.3s;
             &:not(:last-child) {
                 margin-bottom: 30px;
             }
+            &.is-open {
+                .accordion-item__header {
+                    &::after {
+                        transform: rotate(45deg);
+                    }
+                }
+                .accordion-item__content {
+                    opacity: 1;
+                    margin-top: 20px;
+                }
+            }
             &__header {
                 position: relative;
+                transition: all var(--accordion-time) ease-out;
+                cursor: pointer;
                 h4 {
                     font-weight: bold;
                     font-size: 24px;
@@ -284,26 +298,23 @@
                     content: url('/img/icons/plus.svg');
                     transition: transform .2s ease-in-out;
                 }
-                &.active {
+                &.open {
                     &::after {
                         transform: rotate(45deg);
                     }
                 }
             }
             &__content {
-                display: none;
-                transition: .2s ease-out;
-                margin-top: 20px;
+                transition: all var(--accordion-time) ease-out;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                will-change: max-height;
                 p {
                     font-weight: 500;
                     font-size: 16px;
                     line-height: 24px;
                     color: $maincolor;
-                }
-            }
-            &.open {
-                .accordion-item__content {
-                    display: block;
                 }
             }
         }

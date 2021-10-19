@@ -478,14 +478,30 @@ h2 {
   width: 100%;
   padding: 20px 15px;
   border: 1px solid grey;
+  --accordion-time: 0.3s;
 }
 
 .faq-section .faq-accordion .accordion-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
+.faq-section .faq-accordion .accordion-item.is-open .accordion-item__header::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.faq-section .faq-accordion .accordion-item.is-open .accordion-item__content {
+  opacity: 1;
+  margin-top: 20px;
+}
+
 .faq-section .faq-accordion .accordion-item__header {
   position: relative;
+  -webkit-transition: all var(--accordion-time) ease-out;
+  -o-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  cursor: pointer;
 }
 
 .faq-section .faq-accordion .accordion-item__header h4 {
@@ -508,18 +524,20 @@ h2 {
   transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-.faq-section .faq-accordion .accordion-item__header.active::after {
+.faq-section .faq-accordion .accordion-item__header.open::after {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .faq-section .faq-accordion .accordion-item__content {
-  display: none;
-  -webkit-transition: .2s ease-out;
-  -o-transition: .2s ease-out;
-  transition: .2s ease-out;
-  margin-top: 20px;
+  -webkit-transition: all var(--accordion-time) ease-out;
+  -o-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
 }
 
 .faq-section .faq-accordion .accordion-item__content p {
@@ -527,10 +545,6 @@ h2 {
   font-size: 16px;
   line-height: 24px;
   color: #3C3C3C;
-}
-
-.faq-section .faq-accordion .accordion-item.open .accordion-item__content {
-  display: block;
 }
 
 .header {

@@ -55,26 +55,24 @@ function adaptive_function() {
 }
 adaptive_function();
 
-// const accordionHeader = document.querySelectorAll('.accordion-item__header');
-// const accordionContent = document.querySelectorAll('.accordion-item__content')
 
-// accordionHeader.forEach(accordionHeader => {
-//     accordionHeader.addEventListener('click', () => {
-//         accordionHeader.classList.toggle('active');
-//         const accordionContent = accordionHeader.nextElementSibling;
-//         if (accordionHeader.classList.contains('active')) {
-//             accordionContent.style
-//         } else {
-//             accordionContent.style.maxHeight = 0;
-//         }
-
-//     });
-// });
 
 const accordionItem = document.querySelectorAll('.accordion-item')
 
-accordionItem.forEach(accordionItem => {
-    accordionItem.addEventListener('click', () => {
-        accordionItem.classList.toggle("open");
+accordionItem.forEach(accordion => {
+    const control = accordion.querySelector('.accordion-item__header')
+    const content = accordion.querySelector('.accordion-item__content')
+    control.addEventListener('click', () => {
+        if (!accordion.classList.contains('is-open')) {
+            accordion.classList.add('is-open');
+            control.setAttribute('aria-expanded', true);
+            content.setAttribute('aria-hidden', false);
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            accordion.classList.remove('is-open');
+            control.setAttribute('aria-expanded', false);
+            content.setAttribute('aria-hidden', true);
+            content.style.maxHeight = null;
+        }
     })
 })
