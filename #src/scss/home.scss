@@ -179,7 +179,6 @@
         .reward-grid__item {
             position: relative;
             width: 100%;
-            gap: 7px;
             grid-column: 2 span;
             .reward-item__info {
                 position: absolute;
@@ -187,10 +186,14 @@
                 left: 30px;
                 display: flex;
                 align-items: center;
-                p {
+                svg {
+                    min-width: 25px;
+                    min-height: 25px;
+                }
+                h4 {
                     font-weight: 600;
-                    font-size: 24px;
                     line-height: 29px;
+                    @include adaptiv-value('font-size', 24, 18, 1);
                     color: #FFFFFF;
                 }
             }
@@ -205,29 +208,6 @@
             &:nth-child(2n + 4) {
                 grid-column: 1 span;
                 grid-row: 1 span;
-            }
-        }
-    }
-}
-
-.app-section {
-    background: linear-gradient(135deg, #FBDA61 2.88%, #FFC371 100%);
-    padding-top: 70px;
-    &__container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .download-buttons {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        .section-header {
-            max-width: 360px;
-            .btn-dark {
-                width: 172px;
-                margin-top: 45.5px
             }
         }
     }

@@ -1,0 +1,24 @@
+.app-section {
+    background: linear-gradient(135deg, #FBDA61 2.88%, #FFC371 100%);
+    padding-top: 70px;
+    margin-top: 80px;
+    @include adaptiv-value('margin-top', 80, 50, 1);
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .download-buttons {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .section-header {
+            max-width: 360px;
+            .btn-dark {
+                width: 172px;
+                margin-top: 45.5px
+            }
+        }
+    }
+}

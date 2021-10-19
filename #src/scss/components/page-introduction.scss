@@ -1,0 +1,17 @@
+.page-introduction {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    @include adaptiv-value('margin-bottom', 80, 40, 1);
+    @include adaptiv-value('height', 600, 350, 1);
+    @media (max-width: $md4+px) {
+        text-align: center;
+    }
+    p {
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+}
