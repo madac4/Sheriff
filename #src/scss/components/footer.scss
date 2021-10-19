@@ -1,16 +1,20 @@
 footer {
     background-color: #EDF1F7;
-    padding: 50px;
+    padding: 50px 0;
+    margin-top: 80px;
     .footer-body {
         display: flex;
         justify-content: space-between;
         .footer-body__images {
-            img {
+            a {
                 display: block;
                 margin-bottom: 10px;
                 &:first-child {
                     margin-bottom: 30px;
                 }
+            }
+            img {
+                display: block;
             }
         }
         .footer-list {
@@ -29,6 +33,10 @@ footer {
                     font-size: 16px;
                     line-height: 19px;
                     color: $maincolor;
+                    transition: color .3s;
+                    &:hover {
+                        color: darken($color: $maincolor, $amount: 10);
+                    }
                 }
             }
         }
