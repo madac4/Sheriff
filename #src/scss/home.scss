@@ -171,11 +171,19 @@
         }
     }
     .reward-grid {
+        height: 100%;
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 300px);
         grid-gap: 30px;
+        @media (max-width: $md2 + px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 300px);
+        }
+        @media (max-width: $md3 + px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
         .reward-grid__item {
             position: relative;
             width: 100%;
@@ -200,14 +208,26 @@
             &:nth-child(2n + 2) {
                 grid-column: 1 span;
                 grid-row: 2 span;
+                @media (max-width: $md3 + px) {
+                    grid-column: 2 span;
+                    grid-row: 1 span;
+                }
             }
             &:nth-child(2n + 3) {
                 grid-column: 1 span;
                 grid-row: 1 span;
+                @media (max-width: $md3 + px) {
+                    grid-column: 2 span;
+                    grid-row: 1 span;
+                }
             }
             &:nth-child(2n + 4) {
                 grid-column: 1 span;
                 grid-row: 1 span;
+                @media (max-width: $md3 + px) {
+                    grid-column: 2 span;
+                    grid-row: 1 span;
+                }
             }
         }
     }
