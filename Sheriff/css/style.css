@@ -171,9 +171,13 @@ h1 {
   font-size: 64px;
 }
 
+h4 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
 h2 {
   font-weight: bold;
-  font-size: 48px;
   line-height: 120%;
   font-size: 48px;
 }
@@ -490,7 +494,6 @@ h2 {
 
 .faq-section .faq-accordion .accordion-item__content p {
   font-weight: 500;
-  left: 0;
   font-size: 16px;
   line-height: 24px;
   color: #3C3C3C;
@@ -543,6 +546,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 40px;
 }
 
 .tabs-section__left {
@@ -623,6 +627,7 @@ h2 {
   line-height: 150%;
   color: #FFFFFF;
   display: none;
+  overflow-wrap: break-word;
 }
 
 .tabs-section__tabs .tabs-content .content.active {
@@ -681,10 +686,187 @@ h2 {
 }
 
 .buy-section__steps.steps .steps-item p {
+  overflow-wrap: break-word;
   font-size: 16px;
   -webkit-transition: color .4s;
   -o-transition: color .4s;
   transition: color .4s;
+}
+
+.roadmap {
+  margin-bottom: 80px;
+}
+
+.roadmap-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+
+.roadmap-image {
+  max-width: 50%;
+}
+
+.roadmap-content {
+  max-width: 585px;
+}
+
+.roadmap-content h2 {
+  margin-bottom: 30px;
+}
+
+.roadmap-content__accordion:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.roadmap-content__accordion.is-open .roadmap-accordion__header .plus span:last-child {
+  -webkit-transform: rotate(0) translateX(0);
+      -ms-transform: rotate(0) translateX(0);
+          transform: rotate(0) translateX(0);
+}
+
+.roadmap-content__accordion.is-open .roadmap-accordion__content {
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.roadmap-content__accordion .roadmap-accordion__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.roadmap-content__accordion .roadmap-accordion__header .plus {
+  margin-right: 10px;
+}
+
+.roadmap-content__accordion .roadmap-accordion__header .plus span {
+  width: 15px;
+  height: 2px;
+  background-color: #3C3C3C;
+  display: block;
+}
+
+.roadmap-content__accordion .roadmap-accordion__header .plus span:last-child {
+  -webkit-transform: rotate(90deg) translateX(-2px);
+      -ms-transform: rotate(90deg) translateX(-2px);
+          transform: rotate(90deg) translateX(-2px);
+}
+
+.roadmap-content__accordion .roadmap-accordion__content {
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
+}
+
+.roadmap-content__accordion .roadmap-accordion__content p {
+  font-size: 16px;
+}
+
+.roadmap-content__accordion .roadmap-accordion__content p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.benefits-section {
+  margin-bottom: 80px;
+  background-color: #EDF1F7;
+  padding: 80px 0;
+}
+
+.benefits-section__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+
+.benefits-section__information {
+  max-width: 705px;
+}
+
+.benefits-section__information h2 {
+  max-width: 440px;
+  margin-bottom: 30px;
+}
+
+.benefits-section__information p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.benefits-section__information ul {
+  padding-left: 20px;
+}
+
+.benefits-section__information ul:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.benefits-section__information ul li {
+  list-style: disc;
+}
+
+.benefits-section__information ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.benefits-section__blocks .benefits-block {
+  background-color: #fff;
+  padding: 100px;
+  text-align: center;
+  max-width: 580px;
+}
+
+.benefits-section__blocks .benefits-block:nth-child(2n) {
+  background: -o-linear-gradient(172.91deg, #313545 15.4%, #121118 100.07%);
+  background: linear-gradient(277.09deg, #313545 15.4%, #121118 100.07%);
+}
+
+.benefits-section__blocks .benefits-block:nth-child(2n) h4 {
+  color: #fff;
+}
+
+.benefits-section__blocks .benefits-block:nth-child(2n) p {
+  color: #fff;
+}
+
+.benefits-section__blocks .benefits-block:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.benefits-section__blocks .benefits-block img {
+  width: 32px;
+  height: 32px;
+}
+
+.benefits-section__blocks .benefits-block h4 {
+  margin: 10px 0;
+  color: #000;
+}
+
+.benefits-section__blocks .benefits-block p {
+  color: #000;
 }
 
 .header {
@@ -1008,8 +1190,30 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
     height: 350px;
   }
 
+  .tabs-section__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .tabs-section__left {
+    max-width: 100%;
+  }
+
+  .tabs-section__tabs {
+    max-width: 100%;
+  }
+
   .buy-section__steps.steps .steps-item {
     padding: 30px 15px;
+  }
+
+  .benefits-section__information {
+    max-width: 500px;
   }
 }
 
@@ -1047,6 +1251,18 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
   }
 
   .about-section {
+    margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 790));
+  }
+
+  .tabs-section {
+    margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 790));
+  }
+
+  .roadmap {
+    margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 790));
+  }
+
+  .benefits-section {
     margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 790));
   }
 
@@ -1111,6 +1327,40 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
 
   .buy-section__steps.steps {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .roadmap-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .roadmap-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .benefits-section__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 50px;
+  }
+
+  .benefits-section__information {
+    max-width: 100%;
+  }
+
+  .benefits-section__blocks {
+    margin: 0 auto;
   }
 }
 
@@ -1303,5 +1553,19 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
 
   .token-section .token-button {
     width: 100%;
+  }
+
+  .tabs-section__tabs .tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .benefits-section__blocks .benefits-block {
+    padding: 50px;
   }
 }

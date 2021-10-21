@@ -37,14 +37,22 @@
 
 .tabs-section {
     padding: 100px 0;
-    margin-bottom: 80px;
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
     &__container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 40px;
+        @media (max-width: $md1+px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &__left {
         max-width: 600px;
+        @media (max-width: $md1+px) {
+            max-width: 100%;
+        }
         h2 {
             color: #FFFFFF;
             margin-bottom: 30px;
@@ -77,6 +85,9 @@
     }
     &__tabs {
         max-width: 580px;
+        @media (max-width: $md1+px) {
+            max-width: 100%;
+        }
         small {
             font-size: 16px;
             line-height: 19px;
@@ -88,6 +99,10 @@
             align-items: center;
             gap: 30px;
             margin-bottom: 50px;
+            @media (max-width: $md5+px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
             .tab {
                 font-weight: 500;
                 font-size: 36px;
@@ -105,6 +120,7 @@
                 line-height: 150%;
                 color: #FFFFFF;
                 display: none;
+                overflow-wrap: break-word;
                 &.active {
                     display: block;
                 }
@@ -158,9 +174,171 @@
                 transition: color .4s;
             }
             p {
+                overflow-wrap: break-word;
                 font-size: 16px;
                 transition: color .4s;
-                @media (max-width: $md1+px) {}
+            }
+        }
+    }
+}
+
+.roadmap {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &-image {
+        max-width: 50%;
+        @media (max-width: $md2+px) {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+    &-content {
+        max-width: 585px;
+        h2 {
+            margin-bottom: 30px;
+        }
+        &__accordion {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            &.is-open {
+                .roadmap-accordion__header {
+                    .plus {
+                        span {
+                            &:last-child {
+                                transform: rotate(0) translateX(0);
+                            }
+                        }
+                    }
+                }
+                .roadmap-accordion__content {
+                    opacity: 1;
+                    margin-top: 20px;
+                }
+            }
+            .roadmap-accordion__header {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                margin-bottom: 20px;
+                .plus {
+                    margin-right: 10px;
+                    span {
+                        width: 15px;
+                        height: 2px;
+                        background-color: $maincolor;
+                        display: block;
+                        &:last-child {
+                            transform: rotate(90deg) translateX(-2px);
+                        }
+                    }
+                }
+            }
+            .roadmap-accordion__content {
+                transition: all 0.4s ease-out;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                will-change: max-height;
+                p {
+                    font-size: 16px;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.benefits-section {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    background-color: #EDF1F7;
+    padding: 80px 0;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+        }
+    }
+    &__information {
+        max-width: 705px;
+        @media (max-width: $md1+px) {
+            max-width: 500px;
+        }
+        @media (max-width: $md2+px) {
+            max-width: 100%;
+        }
+        h2 {
+            max-width: 440px;
+            margin-bottom: 30px;
+        }
+        p {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+        ul {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            padding-left: 20px;
+            li {
+                list-style: disc;
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    &__blocks {
+        @media (max-width: $md2+px) {
+            margin: 0 auto;
+        }
+        .benefits-block {
+            background-color: #fff;
+            padding: 100px;
+            text-align: center;
+            max-width: 580px;
+            @media (max-width: $md5+px) {
+                padding: 50px;
+            }
+            &:nth-child(2n) {
+                background: linear-gradient(277.09deg, #313545 15.4%, #121118 100.07%);
+                h4 {
+                    color: #fff;
+                }
+                p {
+                    color: #fff;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
+            h4 {
+                margin: 10px 0;
+                color: #000;
+            }
+            p {
+                color: #000;
             }
         }
     }

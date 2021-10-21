@@ -41,9 +41,13 @@ h1 {
     @include adaptiv-value('font-size', 64, 48, 1);
 }
 
+h4 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
 h2 {
     font-weight: bold;
-    font-size: 48px;
     line-height: 120%;
     @include adaptiv-value('font-size', 48, 36, 1);
 }

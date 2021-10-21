@@ -59,36 +59,63 @@ adaptive_function();
 
 const accordionItem = document.querySelectorAll('.accordion-item')
 
-accordionItem.forEach(accordion => {
-    const control = accordion.querySelector('.accordion-item__header')
-    const content = accordion.querySelector('.accordion-item__content')
-    control.addEventListener('click', () => {
-        if (!accordion.classList.contains('is-open')) {
-            accordion.classList.add('is-open');
-            control.setAttribute('aria-expanded', true);
-            content.setAttribute('aria-hidden', false);
-            content.style.maxHeight = content.scrollHeight + 'px';
-        } else {
-            accordion.classList.remove('is-open');
-            control.setAttribute('aria-expanded', false);
-            content.setAttribute('aria-hidden', true);
-            content.style.maxHeight = null;
-        }
+if (accordionItem[0]) {
+    accordionItem.forEach(accordion => {
+        const control = accordion.querySelector('.accordion-item__header')
+        const content = accordion.querySelector('.accordion-item__content')
+        control.addEventListener('click', () => {
+            if (!accordion.classList.contains('is-open')) {
+                accordion.classList.add('is-open');
+                control.setAttribute('aria-expanded', true);
+                content.setAttribute('aria-hidden', false);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                accordion.classList.remove('is-open');
+                control.setAttribute('aria-expanded', false);
+                content.setAttribute('aria-hidden', true);
+                content.style.maxHeight = null;
+            }
+        })
     })
-})
+}
 
 const tabs = document.querySelectorAll(".tabs .tab");
 const contents = document.querySelectorAll(".tabs-content .content");
 
-for (let i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener("click", () => {
-        for (let j = 0; j < contents.length; j++) {
-            contents[j].classList.remove("active");
-        }
-        for (let jj = 0; jj < tabs.length; jj++) {
-            tabs[jj].classList.remove("active");
-        }
-        contents[i].classList.add("active");
-        tabs[i].classList.add("active");
-    });
+if (tabs[0]) {
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener("click", () => {
+            for (let j = 0; j < contents.length; j++) {
+                contents[j].classList.remove("active");
+            }
+            for (let jj = 0; jj < tabs.length; jj++) {
+                tabs[jj].classList.remove("active");
+            }
+            contents[i].classList.add("active");
+            tabs[i].classList.add("active");
+        });
+    }
+}
+
+
+const roadmapAccordionItem = document.querySelectorAll('.roadmap-content__accordion')
+
+if (roadmapAccordionItem[0]) {
+    roadmapAccordionItem.forEach(accordion => {
+        const control = accordion.querySelector('.roadmap-accordion__header')
+        const content = accordion.querySelector('.roadmap-accordion__content')
+        control.addEventListener('click', () => {
+            if (!accordion.classList.contains('is-open')) {
+                accordion.classList.add('is-open');
+                control.setAttribute('aria-expanded', true);
+                content.setAttribute('aria-hidden', false);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                accordion.classList.remove('is-open');
+                control.setAttribute('aria-expanded', false);
+                content.setAttribute('aria-hidden', true);
+                content.style.maxHeight = null;
+            }
+        })
+    })
 }
