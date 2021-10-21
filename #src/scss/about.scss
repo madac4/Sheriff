@@ -35,6 +35,84 @@
     }
 }
 
+.tabs-section {
+    padding: 100px 0;
+    margin-bottom: 80px;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left {
+        max-width: 600px;
+        h2 {
+            color: #FFFFFF;
+            margin-bottom: 30px;
+            span {
+                background-color: $accentcolor;
+                color: $maincolor;
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 144%;
+            color: #D3D3D3;
+            margin-bottom: 30px;
+        }
+        strong {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 21px;
+            color: #FFFFFF;
+            display: block;
+        }
+        .offer {
+            font-size: 16px;
+            color: #FFFFFF;
+            span {
+                color: $accentcolor;
+            }
+        }
+    }
+    &__tabs {
+        max-width: 580px;
+        small {
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+        }
+        .tabs {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            .tab {
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 43px;
+                color: #FFFFFF;
+                cursor: pointer;
+                &.active {
+                    color: $accentcolor;
+                }
+            }
+        }
+        .tabs-content {
+            .content {
+                font-size: 24px;
+                line-height: 150%;
+                color: #FFFFFF;
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 .buy-section {
     .section-header {
         margin-bottom: 30px;
