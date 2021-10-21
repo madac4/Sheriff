@@ -6,7 +6,7 @@
     right: 0;
     width: 100%;
     transition: .4s;
-    z-index: 2;
+    z-index: 3;
     .burger {
         display: none;
         @media (max-width: $md3+px) {
@@ -42,11 +42,10 @@
         background-color: #fff;
         @media (max-width: $md3+px) {
             .burger {
-                span{
+                span {
                     background-color: $maincolor;
-
                 }
-                &.active{
+                &.active {
                     span {
                         background-color: transparent;
                         &:first-child {
@@ -178,7 +177,7 @@
                     align-items: center;
                     color: #fff;
                     cursor: pointer;
-                    @media(max-width: $md4+px){
+                    @media(max-width: $md4+px) {
                         color: $maincolor;
                         padding-left: 25px;
                         margin-top: 30px;
@@ -191,8 +190,8 @@
                     svg {
                         margin-left: 5px;
                         transition: .4s;
-                        path{
-                            @media(max-width: $md4+px){
+                        path {
+                            @media(max-width: $md4+px) {
                                 fill: $maincolor;
                             }
                         }

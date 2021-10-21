@@ -5,19 +5,37 @@ footer {
     .footer-body {
         display: flex;
         justify-content: space-between;
+        @media (max-width: $md2 + px) {
+            flex-direction: column;
+        }
         .footer-body__images {
-            a {
+            .footer-logo {
                 display: block;
-                margin-bottom: 10px;
-                &:first-child {
-                    margin-bottom: 30px;
+                margin-bottom: 30px;
+            }
+            .download-button {
+                display: block;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
                 }
             }
             img {
                 display: block;
+                @media (max-width: $md2 + px) {
+                    margin: 0 auto;
+                }
             }
         }
         .footer-list {
+            @media (max-width: $md2 + px) {
+                margin-top: 30px;
+                text-align: center;
+                @media (max-width: $md2 + px) {
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
             h4 {
                 margin-bottom: 20px;
                 font-weight: 600;
@@ -41,6 +59,12 @@ footer {
             }
         }
         .footer-newsletter {
+            @media (max-width: $md2 + px) {
+                display: block;
+                margin: 0 auto;
+                margin-top: 30px;
+                text-align: center;
+            }
             h4 {
                 margin-bottom: 20px;
             }
@@ -57,6 +81,9 @@ footer {
                     &::placeholder {
                         color: $maincolor;
                     }
+                    @media (max-width: $md4 + px) {
+                        width: 100%;
+                    }
                 }
                 &__submit {
                     background-color: $accentcolor;
@@ -70,6 +97,10 @@ footer {
                     line-height: 19px;
                     color: #000000;
                     cursor: pointer;
+                    @media (max-width: $md4 + px) {
+                        margin-top: 5px;
+                        width: 100%;
+                    }
                 }
             }
         }

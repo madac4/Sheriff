@@ -1,23 +1,54 @@
 .app-section {
     background: linear-gradient(135deg, #FBDA61 2.88%, #FFC371 100%);
     padding-top: 70px;
-    margin-top: 80px;
-    @include adaptiv-value('margin-top', 80, 50, 1);
     &__container {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        @media(max-width: 930px) {
+            display: block;
+        }
+        img {
+            @include adaptiv-value('max-width', 600, 400, 1);
+            @media(max-width: $md2+px) {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
         .download-buttons {
             position: absolute;
             top: 0;
             right: 0;
+            z-index: 2;
+            @media (max-width: $md3 + px) {
+                display: block;
+                position: unset;
+                margin-top: 10px;
+                .download-button {
+                    display: block;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
         }
         .section-header {
             max-width: 360px;
+            @media (max-width: $md3 + px) {
+                margin: 0 auto;
+                text-align: center;
+            }
+            p {
+                margin-bottom: 45.5px
+            }
             .btn-dark {
+                margin-top: 20px;
                 width: 172px;
-                margin-top: 45.5px
+                @media (max-width: $md3 + px) {
+                    margin: 20px auto;
+                }
             }
         }
     }
