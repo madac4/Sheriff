@@ -1,10 +1,10 @@
 @import 'mixin';
 @import 'fonts';
-@import 'icons';
 @import 'default';
 @import 'ui';
-
 @import 'home';
-
+@import 'about';
 @import './components/header.scss';
+@import './components/page-introduction.scss';
+@import './components/app-section.scss';
 @import './components/footer.scss';

@@ -197,6 +197,7 @@
                 display: flex;
                 align-items: center;
                 p {
+                    @include adaptiv-value('font-size', 80, 40, 1);
                     font-weight: 600;
                     font-size: 24px;
                     line-height: 29px;
