@@ -688,6 +688,66 @@ h2 {
   transition: color .4s;
 }
 
+.reward-community {
+  height: 553px;
+}
+
+.reward-community .section-header {
+  max-width: 583px;
+}
+
+.reward-community .section-header h2 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 57px;
+  color: #FFFFFF;
+}
+
+.reward-community .section-header p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E1E1E1;
+}
+
+.hz-section {
+  margin: 60px 0;
+}
+
+.hz-section .hz-nav .hz-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.hz-section .hz-nav .hz-nav__list .nav-list__item {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #3C3C3C;
+}
+
+.hz-section .hz-nav .hz-nav__list .nav-list__item::after:hover {
+  height: 4px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #3C3C3C;
+}
+
+.reward-video {
+  margin: 80px 0;
+}
+
 .header {
   padding: 20px 0;
   position: fixed;
@@ -852,6 +912,10 @@ h2 {
   margin-bottom: 80px;
   margin-bottom: 80px;
   height: 600px;
+}
+
+.page-introduction h1 {
+  max-width: 440px;
 }
 
 .page-introduction p {
