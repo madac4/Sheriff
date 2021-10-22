@@ -1,0 +1,81 @@
+.choose-section {
+    padding: 80px 0;
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    h2 {
+        color: #fff;
+        @media (max-width: $md3+px) {
+            text-align: center;
+        }
+        span {
+            background-color: $accentcolor;
+            color: $maincolor;
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        margin-top: 40px;
+        @media (max-width: $md2+px) {
+            grid-gap: 15px;
+        }
+        @media (max-width: $md3+px) {
+            grid-gap: 30px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .choose-grid__item {
+            border: 2px solid #fff;
+            padding: 30px 20px;
+            @media (max-width: $md2+px) {
+                padding: 20px 15px;
+            }
+            h4 {
+                color: #fff;
+            }
+            p {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.help-section {
+    width: 100%;
+    &__body {
+        background: linear-gradient(135deg, #FBDA61 2.88%, #FFC371 100%);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 600px;
+        overflow: hidden;
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .section-header {
+            max-width: 380px;
+            a {
+                width: 150px;
+                margin-top: 30px;
+                @media (max-width: $md3+px) {
+                    margin: 0 auto;
+                    margin-top: 30px;
+                    width: 200px;
+                }
+                @media (max-width: $md5+px) {
+                    width: 100%;
+                }
+            }
+        }
+        .section-image {
+            align-self: flex-end;
+            position: relative;
+            top: 5px;
+            @media (max-width: $md3+px) {
+                display: none;
+            }
+        }
+    }
+}

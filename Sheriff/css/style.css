@@ -875,6 +875,135 @@ h2 {
   transition: color .4s;
 }
 
+.reward-community {
+  height: 553px;
+}
+
+.reward-community .section-header {
+  max-width: 583px;
+}
+
+.reward-community .section-header h2 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 57px;
+  color: #FFFFFF;
+}
+
+.reward-community .section-header p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E1E1E1;
+}
+
+.hz-section {
+  margin: 60px 0;
+}
+
+.hz-section .hz-nav .hz-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.hz-section .hz-nav .hz-nav__list .nav-list__item {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #3C3C3C;
+}
+
+.hz-section .hz-nav .hz-nav__list .nav-list__item::after:hover {
+  height: 4px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: #3C3C3C;
+}
+
+.reward-video {
+  margin: 80px 0;
+}
+
+.choose-section {
+  padding: 80px 0;
+  margin-bottom: 80px;
+}
+
+.choose-section h2 {
+  color: #fff;
+}
+
+.choose-section h2 span {
+  background-color: #FFE400;
+  color: #3C3C3C;
+}
+
+.choose-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin-top: 40px;
+}
+
+.choose-section__grid .choose-grid__item {
+  border: 2px solid #fff;
+  padding: 30px 20px;
+}
+
+.choose-section__grid .choose-grid__item h4 {
+  color: #fff;
+}
+
+.choose-section__grid .choose-grid__item p {
+  color: #fff;
+}
+
+.help-section {
+  width: 100%;
+}
+
+.help-section__body {
+  background: -o-linear-gradient(315deg, #FBDA61 2.88%, #FFC371 100%);
+  background: linear-gradient(135deg, #FBDA61 2.88%, #FFC371 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 600px;
+  overflow: hidden;
+}
+
+.help-section__body .section-header {
+  max-width: 380px;
+}
+
+.help-section__body .section-header a {
+  width: 150px;
+  margin-top: 30px;
+}
+
+.help-section__body .section-image {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+  top: 5px;
+}
+
 .header {
   padding: 20px 0;
   position: fixed;
@@ -1039,6 +1168,10 @@ h2 {
   margin-bottom: 80px;
   margin-bottom: 80px;
   height: 600px;
+}
+
+.page-introduction h1 {
+  max-width: 440px;
 }
 
 .page-introduction p {
@@ -1287,6 +1420,10 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
     margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 790));
   }
 
+  .choose-section {
+    margin-bottom: calc( 50px + 30 * ((100vw - 320px) / 790));
+  }
+
   .page-introduction {
     margin-bottom: calc( 40px + 40 * ((100vw - 320px) / 790));
   }
@@ -1384,6 +1521,14 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .choose-section__grid {
+    grid-gap: 15px;
+  }
+
+  .choose-section__grid .choose-grid__item {
+    padding: 20px 15px;
+  }
+
   .app-section__container img {
     display: block;
     max-width: 100%;
@@ -1449,6 +1594,35 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
     grid-column: 2 span;
     width: 100%;
     height: 300px;
+  }
+
+  .choose-section h2 {
+    text-align: center;
+  }
+
+  .choose-section__grid {
+    grid-gap: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .help-section__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .help-section__body .section-header a {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 200px;
+  }
+
+  .help-section__body .section-image {
+    display: none;
   }
 
   .header .burger {
@@ -1661,5 +1835,9 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
 
   .benefits-section__blocks .benefits-block {
     padding: 50px;
+  }
+
+  .help-section__body .section-header a {
+    width: 100%;
   }
 }
