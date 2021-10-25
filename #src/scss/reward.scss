@@ -1,19 +1,96 @@
 .reward-community {
     height: 553px;
-    .section-header {
-        max-width: 583px;
-        h2 {
-            font-weight: bold;
-            font-size: 48px;
-            line-height: 57px;
-            color: #FFFFFF;
+    &__container {
+        display: flex;
+        gap: 150px;
+        .section-header {
+            max-width: 583px;
+            h2 {
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 57px;
+                color: #FFFFFF;
+            }
+            p {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: #E1E1E1;
+            }
         }
-        p {
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 24px;
-            color: #E1E1E1;
+        .community-twitter {
+            position: relative;
+            .community-twitter__posts {
+                position: absolute;
+                animation-name: first-column;
+                animation-duration: 3s;
+                animation-fill-mode: both;
+                animation-delay: 0s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                .community-twitter__post {
+                    width: 338px;
+                    padding: 20px;
+                    background-color: #141414;
+                    border-radius: 4px;
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                    .twitter-post__header {
+                        display: flex;
+                        gap: 10px;
+                        .post-header__name {
+                            h4 {
+                                font-size: 16px;
+                                line-height: 19px;
+                                letter-spacing: -0.03em;
+                                color: #FFFFFF;
+                            }
+                            small {
+                                font-size: 14px;
+                                line-height: 17px;
+                                letter-spacing: -0.03em;
+                                color: #8E8E8E;
+                            }
+                        }
+                    }
+                    .twitter-post__message {
+                        margin: 20px 0;
+                        p {
+                            font-size: 16px;
+                            line-height: 130%;
+                            letter-spacing: -0.03em;
+                            color: #B9B9B9;
+                        }
+                    }
+                    .twitter-post__footer {
+                        time {
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: -0.03em;
+                            color: #8E8E8E;
+                        }
+                        a {
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: -0.03em;
+                            color: #2AA3EF;
+                        }
+                    }
+                }
+            }
         }
+    }
+}
+
+@keyframes first-column {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(200px);
     }
 }
 
@@ -30,18 +107,8 @@
                 font-size: $mainsize;
                 line-height: 21px;
                 color: #3C3C3C;
-                &::after {
-                    &:hover {
-                        height: 4px;
-                        height: 0;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        content: "";
-                        height: 4px;
-                        width: 100%;
-                        background-color: #3C3C3C;
-                    }
+                &.active {
+                    border-bottom: 4px solid $maincolor;
                 }
             }
         }
