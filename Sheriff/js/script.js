@@ -297,6 +297,7 @@ if (roadmapAccordionItem[0]) {
 //     });
 // }
 
+<<<<<<< HEAD
 if (document.querySelector('.slider-phone__body')) {
     var swiperMobile = new Swiper('.slider-phone__body', {
         slidesPerView: 1,
@@ -317,6 +318,27 @@ if (document.querySelector('.slider-phone__body')) {
                     <div class="line"></div>
                 </div>`
             },
+=======
+
+var swiperMobile = new Swiper('.slider-phone__body', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    slideToClickedSlide: true,
+    centeredSlides: true,
+    loop: true,
+    //   autoplay: {
+    //     delay: 100000,
+    //   },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function(index, className) {
+            return `
+            <div class="${className}">
+                <div class="circle"></div>
+                <div class="line"></div>
+            </div>`
+>>>>>>> 6a95adee754938916d03b84f24ccd6eb6fa7d3d1
         },
 
         keyboard: {
@@ -349,6 +371,7 @@ if (pagination) {
         bullet.onclick = () => {
             i = sliderBullets.indexOf(bullet);
 
+<<<<<<< HEAD
             setTimeout(() => {
                 if (bullet.classList.contains !== 'swiper-pagination-bullet-active') {
                     for (i; i >= 0; --i) sliderBullets[i].classList.add('swiper-pagination-bullet-active');
@@ -358,4 +381,35 @@ if (pagination) {
             }, 5);
         };
     });
+=======
+        setTimeout(() => {
+            if (bullet.classList.contains !== 'swiper-pagination-bullet-active') {
+                for (i; i >= 0; --i) sliderBullets[i].classList.add('swiper-pagination-bullet-active');
+            } else {
+                for (i; i < sliderBullets.length; ++i) sliderBullets[i].classList.remove('swiper-pagination-bullet-active');
+            }
+        }, 5);
+    };
+});
+
+var twitterPosts = document.querySelectorAll('.community-twitter__posts')
+var currentPos = 0;
+
+
+if (twitterPosts) {
+    var requestAnimationFrame = window.requestAnimationFrame
+
+    function postsLoop() {
+        currentPos += 5;
+
+        twitterPosts.style.left = currentPos + "px";
+
+        if (Math.abs(currentPos) >= 900) {
+            currentPos = -500;
+        }
+
+        requestAnimationFrame(postsLoop);
+    }
+    postsLoop();
+>>>>>>> 6a95adee754938916d03b84f24ccd6eb6fa7d3d1
 }

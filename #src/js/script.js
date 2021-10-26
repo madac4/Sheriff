@@ -230,3 +230,24 @@ if (pagination) {
         };
     });
 }
+
+var twitterPosts = document.querySelectorAll('.community-twitter__posts')
+var currentPos = 0;
+
+
+if (twitterPosts) {
+    var requestAnimationFrame = window.requestAnimationFrame
+
+    function postsLoop() {
+        currentPos += 5;
+
+        twitterPosts.style.left = currentPos + "px";
+
+        if (Math.abs(currentPos) >= 900) {
+            currentPos = -500;
+        }
+
+        requestAnimationFrame(postsLoop);
+    }
+    postsLoop();
+}

@@ -1,14 +1,112 @@
 .reward-community {
-    padding: 180px 0px;
-    .section-header {
-        max-width: 583px;
-        h2 {
-            color: #FFFFFF;
+    height: 555px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 150px;
+        .section-header {
+            max-width: 583px;
+            h2 {
+                font-weight: bold;
+                color: #FFFFFF;
+            }
+            p {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                color: #E1E1E1;
+            }
         }
-        p {
-            font-size: 16px;
-            line-height: 24px;
-            color: #E1E1E1;
+        .community-twitter {
+            position: relative;
+            overflow: hidden;
+            height: 550px;
+            display: flex;
+            gap: 30px;
+            .community-twitter__posts {
+                animation: twitterAnimation 5s linear infinite;
+                top: 0;
+                bottom: -50%;
+                &:hover{
+                    animation-play-state: paused;
+                }
+                &.revers{
+                    animation: revers 5s linear infinite;
+                }
+                .community-twitter__post {
+                    width: 338px;
+                    padding: 20px;
+                    background-color: #141414;
+                    border-radius: 4px;
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+                    .twitter-post__header {
+                        display: flex;
+                        gap: 10px;
+                        .post-header__name {
+                            h4 {
+                                font-size: 16px;
+                                line-height: 19px;
+                                letter-spacing: -0.03em;
+                                color: #FFFFFF;
+                            }
+                            small {
+                                font-size: 14px;
+                                line-height: 17px;
+                                letter-spacing: -0.03em;
+                                color: #8E8E8E;
+                            }
+                        }
+                    }
+                    .twitter-post__message {
+                        margin: 20px 0;
+                        p {
+                            font-size: 16px;
+                            line-height: 130%;
+                            letter-spacing: -0.03em;
+                            color: #B9B9B9;
+                        }
+                    }
+                    .twitter-post__footer {
+                        time {
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: -0.03em;
+                            color: #8E8E8E;
+                        }
+                        a {
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 15px;
+                            letter-spacing: -0.03em;
+                            color: #2AA3EF;
+                        }
+                    }
+                }
+                @keyframes twitterAnimation {
+                    0%{transform: translateY(100%)}
+                    100%{transform: translateY(-100%)}
+                }
+                @keyframes revers {
+                    100%{transform: translateY(100%)}
+                    0%{transform: translateY(-100%)}
+                }
+            }
+
+        }
+        .section-header {
+            max-width: 583px;
+            h2 {
+                color: #FFFFFF;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: #E1E1E1;
+            }
         }
     }
 }
