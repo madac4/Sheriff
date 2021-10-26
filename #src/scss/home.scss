@@ -190,10 +190,14 @@
             gap: 7px;
             grid-column: 2 span;
             grid-row: 1 span;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 30px;
+            @media (max-width: $md1+px) {
+                padding: 15px;
+            }
             .reward-item__info {
-                position: absolute;
-                bottom: 30px;
-                left: 30px;
                 display: flex;
                 align-items: center;
                 svg {

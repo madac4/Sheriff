@@ -374,12 +374,19 @@ h2 {
   gap: 7px;
   grid-column: 2 span;
   grid-row: 1 span;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 30px;
 }
 
 .reward-section .reward-grid .reward-grid__item .reward-item__info {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1339,7 +1346,7 @@ h2 {
 }
 
 .app-section__container .section-header p {
-  margin-bottom: 45.5px;
+  margin-bottom: 45px;
 }
 
 .app-section__container .section-header .btn-dark {
@@ -1456,6 +1463,10 @@ footer .footer-body .footer-newsletter .newsletter-form__submit {
 @media (max-width: 1452px) {
   .container {
     max-width: 970px;
+  }
+
+  .reward-section .reward-grid .reward-grid__item {
+    padding: 15px;
   }
 
   .about-section img {
