@@ -1,14 +1,14 @@
 .reward-community {
-    height: 553px;
+    height: 555px;
+
     &__container {
         display: flex;
+        align-items: center;
         gap: 150px;
         .section-header {
             max-width: 583px;
             h2 {
                 font-weight: bold;
-                font-size: 48px;
-                line-height: 57px;
                 color: #FFFFFF;
             }
             p {
@@ -20,14 +20,20 @@
         }
         .community-twitter {
             position: relative;
+            overflow: hidden;
+            height: 550px;
+            display: flex;
+            gap: 30px;
             .community-twitter__posts {
-                position: absolute;
-                animation-name: first-column;
-                animation-duration: 3s;
-                animation-fill-mode: both;
-                animation-delay: 0s;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
+                animation: twitterAnimation 5s linear infinite;
+                top: 0;
+                bottom: -50%;
+                &:hover{
+                    animation-play-state: paused;
+                }
+                &.revers{
+                    animation: revers 5s linear infinite;
+                }
                 .community-twitter__post {
                     width: 338px;
                     padding: 20px;
@@ -80,41 +86,112 @@
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-@keyframes first-column {
-    from {
-        transform: translateY(-200px);
-    }
-    to {
-        transform: translateY(200px);
-    }
-}
-
-.hz-section {
-    margin: 60px 0;
-    .hz-nav {
-        .hz-nav__list {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            .nav-list__item {
-                position: relative;
-                font-weight: 500;
-                font-size: $mainsize;
-                line-height: 21px;
-                color: #3C3C3C;
-                &.active {
-                    border-bottom: 4px solid $maincolor;
+                @keyframes twitterAnimation {
+                    0%{transform: translateY(100%)}
+                    100%{transform: translateY(-100%)}
                 }
+                @keyframes revers {
+                    100%{transform: translateY(100%)}
+                    0%{transform: translateY(-100%)}
+                }
+            }
+
+        }
+        .section-header {
+            max-width: 583px;
+            h2 {
+                color: #FFFFFF;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: #E1E1E1;
             }
         }
     }
 }
 
 .reward-video {
-    margin: 80px 0;
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    @include adaptiv-value('margin-top', 80, 50, 1);
+}
+
+.curator-feed {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+}
+
+// .insta-section {
+//     @include adaptiv-value('margin-bottom', 80, 50, 1);
+//     &__buttons {
+//         margin-bottom: 30px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         button {
+//             font-weight: 500;
+//             font-size: 16px;
+//             position: relative;
+//             color: #3C3C3C;
+//             &:not(:last-child) {
+//                 margin-right: 30px;
+//             }
+//             &::after {
+//                 content: '';
+//                 position: absolute;
+//                 transition: .3s;
+//                 width: 100%;
+//                 height: 5px;
+//                 background-color: #3C3C3C;
+//                 left: 0;
+//                 bottom: -15px;
+//                 opacity: 0;
+//             }
+//             &.is-checked {
+//                 &::after {
+//                     bottom: -5px;
+//                     opacity: 1;
+//                 }
+//             }
+//         }
+//     }
+//     &__grid {
+//         display: flex;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         gap: 30px;
+//         .el {
+//             width: 25%;
+//             height: 200px;
+//             &.vip {
+//                 background-color: rebeccapurple;
+//             }
+//             &.exclusive {
+//                 background-color: aqua;
+//             }
+//             &.events {
+//                 background-color: blanchedalmond;
+//             }
+//             &.collectibles {
+//                 background-color: mediumorchid;
+//             }
+//             &.merch {
+//                 background-color: midnightblue;
+//             }
+//         }
+//     }
+// }
+.crt-post-c.crt-post-border {
+    width: 100%;
+}
+
+.crt-post .crt-post-header {
+    margin: 0 !important;
+}
+
+.crt-post-text {
+    background-color: #efefef;
+}
+
+.crt-post-share {
+    display: none;
 }
