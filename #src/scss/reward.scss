@@ -1,12 +1,29 @@
 .reward-community {
     height: 555px;
-
+    margin-bottom: 80px;
+    @media (max-width: $md2+px) {
+        height: 100%;
+    }
     &__container {
         display: flex;
         align-items: center;
         gap: 150px;
+        @media (max-width: $md1+px) {
+                gap: 10px;
+        }
+        @media (max-width: $md2+px) {
+            flex-direction: column;
+            padding: 50px 0;
+            gap: 50px;
+        }
         .section-header {
             max-width: 583px;
+            @media (max-width: $md1+px) {
+                max-width: 400px;
+            }
+            @media (max-width: $md2+px) {
+                max-width: 100%;
+            }
             h2 {
                 font-weight: bold;
                 color: #FFFFFF;
@@ -24,21 +41,48 @@
             height: 550px;
             display: flex;
             gap: 30px;
+            @media (max-width: $md1+px) {
+                gap: 15px;  
+            }
+            @media (max-width: $md2+px) {
+                display: block; 
+                height: 100%;
+                width: 100%;
+
+            }
             .community-twitter__posts {
                 animation: twitterAnimation 5s linear infinite;
-                top: 0;
-                bottom: -50%;
                 &:hover{
                     animation-play-state: paused;
                 }
                 &.revers{
                     animation: revers 5s linear infinite;
+                    @media (max-width: $md2+px) {
+                        animation: none;
+                    }
+                }
+                @media (max-width: $md2+px) {
+                    animation: none;
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr );
+                    grid-gap: 20px;
+                    margin-bottom: 20px;
+                }
+                @media (max-width: $md4+px) {
+                    grid-template-columns: repeat(1,1fr );
                 }
                 .community-twitter__post {
                     width: 338px;
                     padding: 20px;
                     background-color: #141414;
                     border-radius: 4px;
+                    @media (max-width: $md1+px) {
+                        width: 280px;
+                    }
+                    @media (max-width: $md2+px) {
+                        width: 100%;
+                        height: 100%;
+                    }
                     &:not(:last-child) {
                         margin-bottom: 30px;
                     }
